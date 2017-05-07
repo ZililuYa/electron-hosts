@@ -34,16 +34,17 @@ let createWindow = () => {
         width: 1000,
         height: 700,
         resizable: false,//禁止改变窗口大小
-        frame: false//设置成frame模式
+        frame: false,//设置成frame模式
         // API : https://github.com/electron/electron/blob/master/docs-translations/zh-CN/api/frameless-window.md
         // title:hidden
+        // backgroundColor: 'transparent'
     });
 
     //并且装载应用的index.html页面
     openHtml('index.html');
 
     //打开开发工具页面
-    //win.webContents.openDevTools();
+    // win.webContents.openDevTools();
 
     //当窗口关闭时调用的方法
     win.on('closed', () => {
@@ -71,6 +72,11 @@ let createWindow = () => {
         //         app.quit();
         //     }
         // })
+    });
+
+    //触发调试 Alt+F12
+    globalShortcut.register('Alt+F12', () => {
+        win.webContents.openDevTools();
     });
 
     //调试

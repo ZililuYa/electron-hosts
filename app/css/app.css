@@ -1,7 +1,10 @@
 @font-face {
     font-family: 'Segoe';
-    src: url('//cdn.webfont.youziku.com/webfonts/nomal/99006/46749/58d1ed10f629d81b7cd03461.gif?r=38546320820');
-    src: url('//cdn.webfont.youziku.com/webfonts/nomal/99006/46749/58d1ed10f629d81b7cd03461.gif?r=38546320820?#iefix') format('embedded-opentype'), url('//cdn.webfont.youziku.com/webfonts/nomal/99006/46749/58d1ed10f629d81b7cd03461.bmp?r=38546320820') format('woff'), url('//cdn.webfont.youziku.com/webfonts/nomal/99006/46749/58d1ed10f629d81b7cd03461.jpg?r=38546320820') format('truetype'), url('//cdn.webfont.youziku.com/webfonts/nomal/99006/46749/58d1ed10f629d81b7cd03461.png#SegoeWP') format('svg');
+    src: url('http://cdn.webfont.youziku.com/webfonts/nomal/99006/46749/58d1ed10f629d81b7cd03461.gif?r=38546320820');
+    src: url('http://cdn.webfont.youziku.com/webfonts/nomal/99006/46749/58d1ed10f629d81b7cd03461.gif?r=38546320820?#iefix') format('embedded-opentype'),
+    url('http://cdn.webfont.youziku.com/webfonts/nomal/99006/46749/58d1ed10f629d81b7cd03461.bmp?r=38546320820') format('woff'),
+    url('http://cdn.webfont.youziku.com/webfonts/nomal/99006/46749/58d1ed10f629d81b7cd03461.jpg?r=38546320820') format('truetype'),
+    url('http://cdn.webfont.youziku.com/webfonts/nomal/99006/46749/58d1ed10f629d81b7cd03461.png#SegoeWP') format('svg');
 }
 
 
@@ -30,7 +33,7 @@ html {
     font-size: 1.7rem;
     font-weight: 100;
     border-top: 0 !important;
-    color: #000;
+    color: #636363;
     padding-top: 40px !important;
     border-bottom: 2px solid #eee;
     transition-duration: 1s;

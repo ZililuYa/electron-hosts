@@ -3,6 +3,7 @@ window.$ = window.jQuery = require('jquery');
 require('bootstrap');
 
 let listData = [];
+let index = 0;
 let Judge = {
     ip: /^(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9])\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[0-9])$/,
     dn: /^([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}$/
@@ -34,8 +35,11 @@ let setListData = (data) => {
     for (let x in arr) {
         if (arr[x].toString().indexOf('#') == -1 && arr[x].toString().indexOf('::') == -1) {
             let a = arr[x].toString().split('\t');
-            if (a.length == 2)
+            if (a.length == 2) {
+                a.push(index);
+                index++;
                 listData.push(a);
+            }
         }
     }
     vm.listData = listData;
@@ -49,16 +53,22 @@ let vm = avalon.define({
         ip: '',
         dn: ''
     },
-    //添加
-    addClick: function () {
+    //添加Hosts
+    addClick: () => {
         if (vm.ipJudge() && vm.dnJudge()) {
-            vm.listData.push([vm.dataArr.ip, vm.dataArr.dn]);
+            vm.listData.push([vm.dataArr.ip, vm.dataArr.dn, index]);
+            index++;
             vm.postDataFun();
         }
     },
     //更新Hosts
     postDataFun: function () {
-        let mainData = vm.listData.join('\n');
+        let postData = [];
+
+        for (let i in vm.listData) {
+            postData.push([vm.listData[i][0], vm.listData[i][1]]);
+        }
+        let mainData = postData.join('\n');
         mainData = mainData.replace(/\,/g, '\t');
         // $.post('/setHosts', {mainData: mainData}, function (data) {
         //
@@ -67,9 +77,8 @@ let vm = avalon.define({
 
     },
     //删除
-    deleteClick: function (i) {
+    deleteClick: (i) => {
         $("#alerts").addClass('show');
-        alert(i);
         setTimeout(() => {
             $('#alerts').removeClass('show');
         }, 2000);
@@ -105,7 +114,7 @@ let vm = avalon.define({
 let deleteArr = (d, delIndex) => {
     let temArray = [];
     for (let i = 0; i < d.length; i++) {
-        if (i != delIndex) {
+        if (d[i][2] != delIndex) {
             temArray.push(d[i]);
         }
     }

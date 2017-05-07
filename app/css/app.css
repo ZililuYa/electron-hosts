@@ -1,0 +1,133 @@
+@font-face {
+    font-family: 'Segoe';
+    src: url('//cdn.webfont.youziku.com/webfonts/nomal/99006/46749/58d1ed10f629d81b7cd03461.gif?r=38546320820');
+    src: url('//cdn.webfont.youziku.com/webfonts/nomal/99006/46749/58d1ed10f629d81b7cd03461.gif?r=38546320820?#iefix') format('embedded-opentype'), url('//cdn.webfont.youziku.com/webfonts/nomal/99006/46749/58d1ed10f629d81b7cd03461.bmp?r=38546320820') format('woff'), url('//cdn.webfont.youziku.com/webfonts/nomal/99006/46749/58d1ed10f629d81b7cd03461.jpg?r=38546320820') format('truetype'), url('//cdn.webfont.youziku.com/webfonts/nomal/99006/46749/58d1ed10f629d81b7cd03461.png#SegoeWP') format('svg');
+}
+
+
+html {
+    font-size: 62.5%;
+}
+*{
+    font-family: Segoe, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+}
+.btn.add {
+    border-radius: 0;
+    transition-duration: .5s;
+    padding: 0 2rem;
+    margin: 0;
+    height: 34px;
+    line-height: 34px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.btn.add:hover{
+    color: #990033;
+}
+
+.table td {
+    vertical-align: middle !important;
+    font-size: 1.7rem;
+    font-weight: 100;
+    border-top: 0 !important;
+    color: #000;
+    padding-top: 40px !important;
+    border-bottom: 2px solid #eee;
+    transition-duration: 1s;
+}
+
+.table tr:hover td {
+    border-bottom: 2px solid #990033;
+}
+
+body {
+    padding-bottom: 500px;
+}
+button ,a,input{
+    -webkit-app-region: no-drag !important;
+}
+.table .del{
+    color: #990033;
+    font-size: 1.1rem;
+    float: right;
+    transition-duration: .5s;
+}
+
+.table .del:hover {
+    color: #CC0033;
+    text-shadow: 0 0 1px #ddd;
+}
+
+.navbar-hosts{
+    background-color: #fff;
+    box-shadow: 0 0 10px #e8e8e8;
+    -webkit-app-region: drag;
+}
+
+.navbar-hosts input{
+    border-radius: 0 !important;
+    margin-right: 15px;
+}
+
+.navbar-hosts .navbar-brand{
+    font-size: 2rem;
+    transition-duration: .5s;
+    color: #422099;
+    font-weight: bold;
+}
+
+.navbar-hosts .navbar-brand:hover {
+    color: #CC0033;
+    text-shadow: 0 0 1px #ddd;
+}
+
+.navbar-hosts .navbar-form{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.container-hosts .alert{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    border-radius: 0 !important;
+    padding: 10px 20px 10px 20px;
+    transform:scale(0.1,0.1);
+    opacity: 0;
+    transition-duration: .3s;
+}
+.container-hosts .alert.show{
+    transform:scale(1,1);
+    opacity: 1;
+}
+
+.container-hosts .logo{
+    font-size: 1.2rem;
+    color: #636363;
+    position: relative;
+}
+
+.container-hosts .logo:before{
+    position: absolute;
+    right: 50%;
+    margin-right: -43.43px;
+    top: 200px;
+    content: "HOSTS CHANGE";
+}
+.container-hosts .logo:after{
+    position: absolute;
+    right: 50%;
+    margin-right: -77px;
+    top: 230px;
+    content: "Close Window（ALT + Z）";
+    color: #990033;
+}
+
+.container-hosts .navbar-toggle .icon-bar{
+    background-color: #990033;
+}
+
+
+.navbar{
+    cursor: pointer;
+}

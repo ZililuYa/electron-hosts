@@ -1,0 +1,29 @@
+{
+  "name": "electron-hosts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nesfe/electron-hosts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nesfe/electron-hosts/issues"
+  },
+  "homepage": "https://github.com/nesfe/electron-hosts#readme",
+  "devDependencies": {
+    "electron-prebuilt": "^1.4.13",
+    "electron-reload": "^1.1.0"
+  },
+  "dependencies": {
+    "avalon2": "^2.2.6",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1"
+  }
+}

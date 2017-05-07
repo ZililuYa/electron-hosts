@@ -147,10 +147,11 @@ Menu.setApplicationMenu(menu);
 require('./controller/ipcMain');
 
 
+//打包asar发布的时候 请注释
 //自动刷新
-require('electron-reload')(__dirname, {
-    electron: require('electron-prebuilt')
-});
+// require('electron-reload')(__dirname, {
+//     electron: require('electron-prebuilt')
+// });
 
 //
 // app.on('will-quit', function () {

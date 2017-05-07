@@ -1,6 +1,4 @@
 const {ipcRenderer} = require('electron');
-window.$ = window.jQuery = require('jquery');
-require('bootstrap');
 
 let listData = [];
 let index = 0;
